@@ -18,11 +18,11 @@ public class TesteListaDeAula {
 		aulas.add(a2);
 		aulas.add(a3);
 				
-		System.out.println(aulas);
-		Collections.sort(aulas);
+		System.out.println(aulas);		
+		Collections.sort(aulas); //Necessários implementar o Comparable (interface) na classe Aula e reescreve o método compareTo
 		System.out.println(aulas);
 		
-		//Comparar pelo tempo de aula, apenas no java8 pra cima
+		//Comparação genérica, passando qualquer atributo da classe.
 		//Collections.sort(aulas, Comparator.comparing(Aula::getTempo));
 		aulas.sort(Comparator.comparing(Aula::getTempo));
 		System.out.println(aulas);
