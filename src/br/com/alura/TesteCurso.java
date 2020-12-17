@@ -20,7 +20,7 @@ public class TesteCurso {
 
 		List<Aula> listaAulas = javaColecoes.getAulas();
 		
-		listaAulas.sort(listaAulas);
+		
 		
 		listaAulas.forEach( aula -> System.out.println(aula));
 	}
