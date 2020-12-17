@@ -17,7 +17,7 @@ public class TesteListaDeAula {
 		aulas.add(a1);
 		aulas.add(a2);
 		aulas.add(a3);
-				
+		
 		System.out.println(aulas);		
 		Collections.sort(aulas); //Necessários implementar o Comparable (interface) na classe Aula e reescreve o método compareTo
 		System.out.println(aulas);
