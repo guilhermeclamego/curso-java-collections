@@ -3,16 +3,24 @@ package br.com.alura;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
 public class Curso {
-
+	/**
+	 * Apenas com HashSet não irá mostrar na ordem, porém tera acesso aos getters 
+	 * overide dos métodos hashcode e equals da Classe Aluno, facilitará essa ordenação
+	 * Já o LinkedHashSet, esse irá retornar os dados na ordem que foi adicionada.
+	 */
+	
 	private String nome;
 	private String instrutor;
 	private List<Aula> aulas = new ArrayList();
-	private Set<Aluno> alunos = new HashSet();
+	//Com o LinkedHashSet irá mostrar na ordem , não terá acesso aos getters
+	private Set<Aluno> alunos = new LinkedHashSet<>();
+	//private Set<Aluno> alunos = new HashSet<>();
 
 	public Curso(String nome, String instrutor) {
 		this.nome = nome;

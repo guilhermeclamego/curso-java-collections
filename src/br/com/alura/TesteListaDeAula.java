@@ -20,11 +20,15 @@ public class TesteListaDeAula {
 		
 		System.out.println(aulas);		
 		Collections.sort(aulas); //Necessários implementar o Comparable (interface) na classe Aula e reescreve o método compareTo
+		System.out.println("Ordenração de aulas pelo comparable overide");
 		System.out.println(aulas);
+		
+		System.out.println("");
 		
 		//Comparação genérica, passando qualquer atributo da classe.
 		//Collections.sort(aulas, Comparator.comparing(Aula::getTempo));
 		aulas.sort(Comparator.comparing(Aula::getTempo));
+		System.out.println("Ordenação de aulas pelo Comparator.comparing");
 		System.out.println(aulas);
 	}
 
