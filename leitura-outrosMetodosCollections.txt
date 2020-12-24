@@ -17,3 +17,7 @@ Este mÃ©todo tambÃ©m Ã© utilizado para inicializar Listas recÃ©m criadas com Nul
 List<Type> list = new ArrayList<Type>(Collections.nCopies(1000, (Type)null));
 
 Estes sÃ£o apenas alguns exemplos dos diversos mÃ©todos da classe Collections.
+
+
+
+A implementação TreeSet já ordena os seus elementos na hora da inserção. Qual é o critério da ordenação depende e pode ser definido através de um Comparator.
