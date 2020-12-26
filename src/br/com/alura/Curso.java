@@ -18,7 +18,7 @@ public class Curso {
 	private String nome;
 	private String instrutor;
 	private List<Aula> aulas = new ArrayList();
-	//Com o LinkedHashSet irá mostrar na ordem , não terá acesso aos getters
+	//Com o LinkedHashSet irá mostrar na ordem, não terá acesso aos getters
 	private Set<Aluno> alunos = new LinkedHashSet<>();
 	//private Set<Aluno> alunos = new HashSet<>();
 
