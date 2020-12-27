@@ -2,11 +2,15 @@ package br.com.alura;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Set;
+
 
 public class Curso {
 	/**
@@ -21,6 +25,9 @@ public class Curso {
 	//Com o LinkedHashSet irá mostrar na ordem, não terá acesso aos getters
 	private Set<Aluno> alunos = new LinkedHashSet<>();
 	//private Set<Aluno> alunos = new HashSet<>();
+	
+	//Criação do mapa, pra faciliar busca do aluno <key, value>
+	private Map<Integer, Aluno> mapaAlunos = new HashMap<>();
 
 	public Curso(String nome, String instrutor) {
 		this.nome = nome;
@@ -58,6 +65,7 @@ public class Curso {
 
 	public void matricula(Aluno aluno) {
 		this.alunos.add(aluno);
+		this.mapaAlunos.put(aluno.getNumeroMatricula(), aluno);
 		
 	}
 
@@ -67,5 +75,14 @@ public class Curso {
 
 	public boolean estaMatriculado(Aluno aluno) {
 		return this.alunos.contains(aluno);
+	}
+
+	public Aluno buscaAluno(int matricula) {
+		
+		if(this.mapaAlunos.get(matricula) == null) {
+			 throw new NoSuchElementException("Matricula não encontrada");
+		}
+		return this.mapaAlunos.get(matricula);
+		
 	}
 }
